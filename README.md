@@ -12,8 +12,8 @@
 　└30m/s를 기준으로 적용  
 #### ·Wiener Filtering  
 -고정 신호 및 잡음 스펙트럼과 추가 잡음을 가정하여 선형시불변 필터링을 통해 원하는 또는 목표 임의 프로세스의 추정치를 생성하는 데 사용되는 필터  
--<img src="https://github.com/user-attachments/assets/a6ff16d7-2c1d-4dfd-b85a-505eee216f2e)" height="30">  
--<img src="https://github.com/user-attachments/assets/d7ca9f7b-0d69-40b3-b824-29a6da0826bd)" height="30">  
+-![Image](https://github.com/user-attachments/assets/a6ff16d7-2c1d-4dfd-b85a-505eee216f2e)
+-![Image](https://github.com/user-attachments/assets/d7ca9f7b-0d69-40b3-b824-29a6da0826bd)
 #### ·Overlap-add
 -windowing과정으로 나누었던 Short Time Signal을 통합해줌  
 　└Short Time Signal의 50%를 Overlap  
@@ -46,61 +46,61 @@
 
 -Octave 4.4.1를 사용하여 결과 확인  
 -comp_snr  
-![Image](https://github.com/user-attachments/assets/911f9200-3249-4e6b-b6df-4d7872020952)
+![Image](https://github.com/user-attachments/assets/911f9200-3249-4e6b-b6df-4d7872020952)  
 -comp_cep  
-![Image](https://github.com/user-attachments/assets/39cb608f-02b4-413c-ad02-e38ca7ce0a20)
-　└comp_snr, comp_cep로 신호처리한 결과와 잡음섞인 원본 비교
-　　└원본: sp01.wav / 잡음처리 후: test_dt.wav
-　└SNR의 절댓값이 커질수록 잡음 제거가 잘 된 음성
-　└CEP의 절댓값이 커질수록 잡음 제거가 잘 된 음성
+![Image](https://github.com/user-attachments/assets/39cb608f-02b4-413c-ad02-e38ca7ce0a20)  
+　└comp_snr, comp_cep로 신호처리한 결과와 잡음섞인 원본 비교  
+　　└원본: sp01.wav / 잡음처리 후: test_dt.wav  
+　└SNR의 절댓값이 커질수록 잡음 제거가 잘 된 음성  
+　└CEP의 절댓값이 커질수록 잡음 제거가 잘 된 음성  
 
 ## 기대효과 및 개선방향
 필터링 과정을 통해 불필요한 잡음이 섞인 음성 파일에서 잡음을 제거하고 원하는 음성만을 출력할 수 있었다. 이를 통해 다양한 잡음이 섞인 음성에서도 필요한 정보만을 추출하여 사용할 수 있을 것으로 기대된다.  
 또한 잡음의 크기별로 동일한 단계를 밟았을 때 다음과 같은 결과를 비교할수 있었다.  
 
 #### 0dB
-![Image](https://github.com/user-attachments/assets/0b74fb71-b208-4080-9701-4ac96b446ac9)
-![Image](https://github.com/user-attachments/assets/7546ccaf-3429-42ed-bffd-504d5f3f127f)
-![Image](https://github.com/user-attachments/assets/d97e97b8-e38c-4320-882e-be969e39b3b7)
+![Image](https://github.com/user-attachments/assets/0b74fb71-b208-4080-9701-4ac96b446ac9)  
+![Image](https://github.com/user-attachments/assets/7546ccaf-3429-42ed-bffd-504d5f3f127f)  
+![Image](https://github.com/user-attachments/assets/d97e97b8-e38c-4320-882e-be969e39b3b7)  
 ▼잡음 섞인 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/a86c3102-1a8e-4eec-9733-ca66e4783d0d)
+![Image](https://github.com/user-attachments/assets/a86c3102-1a8e-4eec-9733-ca66e4783d0d)  
 ▼필터링 된 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/bec94f94-eff8-4f32-8ead-d691340c05ff)
+![Image](https://github.com/user-attachments/assets/bec94f94-eff8-4f32-8ead-d691340c05ff)  
 
 #### 5dB
-![Image](https://github.com/user-attachments/assets/ccf364cb-eb66-4ac3-a21d-e46d74e287d6)
-![Image](https://github.com/user-attachments/assets/eb1c60c0-3e6c-4a04-b9ae-71bda9182901)
-![Image](https://github.com/user-attachments/assets/9f98616c-a656-4d25-ad72-49e523491217)
+![Image](https://github.com/user-attachments/assets/ccf364cb-eb66-4ac3-a21d-e46d74e287d6)  
+![Image](https://github.com/user-attachments/assets/eb1c60c0-3e6c-4a04-b9ae-71bda9182901)  
+![Image](https://github.com/user-attachments/assets/9f98616c-a656-4d25-ad72-49e523491217)  
 ▼잡음 섞인 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/65e780d4-4380-4ccd-997e-be03d5f8db8f)
+![Image](https://github.com/user-attachments/assets/65e780d4-4380-4ccd-997e-be03d5f8db8f)  
 ▼필터링 된 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/d8a08f63-80ff-4248-900b-5195ba74bbfe)
+![Image](https://github.com/user-attachments/assets/d8a08f63-80ff-4248-900b-5195ba74bbfe)  
 
 #### 10dB
-![Image](https://github.com/user-attachments/assets/ec65454e-15d3-4117-aa3c-29b17e9a1120)
-![Image](https://github.com/user-attachments/assets/c0bb2c4a-165f-4ca0-a722-eeca812a113b)
-![Image](https://github.com/user-attachments/assets/33855fd0-3510-446a-b5b8-8da507e80520)
+![Image](https://github.com/user-attachments/assets/ec65454e-15d3-4117-aa3c-29b17e9a1120)  
+![Image](https://github.com/user-attachments/assets/c0bb2c4a-165f-4ca0-a722-eeca812a113b)  
+![Image](https://github.com/user-attachments/assets/33855fd0-3510-446a-b5b8-8da507e80520)  
 ▼잡음 섞인 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/218aae9f-9db1-45ba-a981-c8047317babc)
+![Image](https://github.com/user-attachments/assets/218aae9f-9db1-45ba-a981-c8047317babc)  
 ▼필터링 된 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/4e343baa-cd7b-4d34-ab25-536cca200af7)
+![Image](https://github.com/user-attachments/assets/4e343baa-cd7b-4d34-ab25-536cca200af7)  
 
 #### 15dB
-![Image](https://github.com/user-attachments/assets/ed8f78d8-b47b-4742-a780-a20fbae58510)
-![Image](https://github.com/user-attachments/assets/00ca2d5a-db11-4f95-b4f2-9b643c1cc02a)
-![Image](https://github.com/user-attachments/assets/886cfc6b-7a67-46bf-bf90-b8c5f4b88af1)
+![Image](https://github.com/user-attachments/assets/ed8f78d8-b47b-4742-a780-a20fbae58510)  
+![Image](https://github.com/user-attachments/assets/00ca2d5a-db11-4f95-b4f2-9b643c1cc02a)  
+![Image](https://github.com/user-attachments/assets/886cfc6b-7a67-46bf-bf90-b8c5f4b88af1)  
 ▼잡음 섞인 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/b2364b7f-f7b8-4c05-b431-6ba2c239b9cf)
+![Image](https://github.com/user-attachments/assets/b2364b7f-f7b8-4c05-b431-6ba2c239b9cf)  
 ▼필터링 된 신호 스펙트럼  
-![Image](https://github.com/user-attachments/assets/22331ad4-4d7f-47e3-8803-f9f334bf8b22)
+![Image](https://github.com/user-attachments/assets/22331ad4-4d7f-47e3-8803-f9f334bf8b22)  
 
 위 4가지 결과를 통해 잡음이 많이 들어간 음성일수록 필터의 효과가 뚜렷하게 나타나는 경향을 확인할 수 있었다.  
 다만 Wiener Filter는 선형 필터로 불규칙한 잡음에 대해 결과를 내기 힘들며 기준점이 정확하지 않고 예상 기준점을 사용한다는 한계점이 뚜렷하게 드러났다. 또한 학부생의 한계상 100% 명확한 음성을 추출하지 못했고 잡음비가 조금 남았다. 이를 이겨내기 위해 Wiener Filter를 중첩해 여러번 사용함으로서 정확도를 올리는 방안도 생각해 보았다.  
-![Image](https://github.com/user-attachments/assets/7fca85f7-bbef-4a14-8a61-b6c189e5c5b9)
+![Image](https://github.com/user-attachments/assets/7fca85f7-bbef-4a14-8a61-b6c189e5c5b9)  
 
 
 ## 기타 사항
 RaspberryPi의 활용 화면  
-![Image](https://github.com/user-attachments/assets/0e07df8d-f1dd-44c5-a8e0-48cc56959086)
+![Image](https://github.com/user-attachments/assets/0e07df8d-f1dd-44c5-a8e0-48cc56959086)  
 Octave의 활용 화면  
-![Image](https://github.com/user-attachments/assets/7a988051-e319-4d8b-97c3-f5c6860b00e0)
+![Image](https://github.com/user-attachments/assets/7a988051-e319-4d8b-97c3-f5c6860b00e0)  
