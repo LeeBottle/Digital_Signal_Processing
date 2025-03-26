@@ -12,8 +12,8 @@
 　└30m/s를 기준으로 적용  
 #### ·Wiener Filtering  
 -고정 신호 및 잡음 스펙트럼과 추가 잡음을 가정하여 선형시불변 필터링을 통해 원하는 또는 목표 임의 프로세스의 추정치를 생성하는 데 사용되는 필터  
--![Image](https://github.com/user-attachments/assets/a6ff16d7-2c1d-4dfd-b85a-505eee216f2e)
--![Image](https://github.com/user-attachments/assets/d7ca9f7b-0d69-40b3-b824-29a6da0826bd)
+-![Image](https://github.com/user-attachments/assets/a6ff16d7-2c1d-4dfd-b85a-505eee216f2e)  
+-![Image](https://github.com/user-attachments/assets/d7ca9f7b-0d69-40b3-b824-29a6da0826bd)  
 #### ·Overlap-add
 -windowing과정으로 나누었던 Short Time Signal을 통합해줌  
 　└Short Time Signal의 50%를 Overlap  
